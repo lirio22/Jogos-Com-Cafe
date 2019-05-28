@@ -1,0 +1,23 @@
+{
+   "suspeitos":[
+      {
+         "nome":"Sir Arthur Conan",
+         "idade":60,
+         "interrogado":true,
+         "itens":[
+            "cachimbo",
+            "caneta"
+         ]
+      },
+      {
+         "nome":"Agatha Christie",
+         "idade":45,
+         "interrogado":false,
+         "itens":[
+            "livro",
+            "dinheiro",
+            "guarda-chuva"
+         ]
+      }
+   ]
+}
