@@ -14,14 +14,17 @@ public class Genius : MonoBehaviour
 
     [SerializeField] private Image[] botoesImage;
 
+    [SerializeField] private AudioClip[] audioClips;
+
     private List<int> sequenciaComputador = new List<int>();    
 
-    private int indiceJogador = 0;
+    private int indiceJogador;
 
     public void Inicia()
     {
         pontos.ReiniciaPontos();
         sequenciaComputador.Clear();
+        indiceJogador = 0;
         JogadaComputador();
         botaoComecar.SetActive(false);
     }
@@ -41,6 +44,7 @@ public class Genius : MonoBehaviour
         for (int i = 0; i < sequenciaComputador.Count; i++)
         {                        
             botoes[sequenciaComputador[i]].Select();
+            AudioPlayer.instance.TocarSom(audioClips[sequenciaComputador[i]]);
             yield return new WaitForSeconds(0.5f);
             botaoAux.Select();
             yield return new WaitForSeconds(0.2f);
@@ -56,6 +60,8 @@ public class Genius : MonoBehaviour
         {
             pontos.AdicionaPontos();
             indiceJogador++;
+            AudioPlayer.instance.TocarSom(audioClips[_botaoPressionado]);
+
             if(indiceJogador >= sequenciaComputador.Count)
             {
                 botaoAux.Select();
@@ -82,12 +88,16 @@ public class Genius : MonoBehaviour
         for(int i = 0; i < 2; i++)
         {
             botoes[0].Select();
+            AudioPlayer.instance.TocarSom(audioClips[0]);
             yield return new WaitForSeconds(0.1f);
             botoes[1].Select();
+            AudioPlayer.instance.TocarSom(audioClips[1]);
             yield return new WaitForSeconds(0.1f);
             botoes[3].Select();
+            AudioPlayer.instance.TocarSom(audioClips[3]);
             yield return new WaitForSeconds(0.1f);
             botoes[2].Select();
+            AudioPlayer.instance.TocarSom(audioClips[2]);
             yield return new WaitForSeconds(0.1f);
         }        
         botaoAux.Select();

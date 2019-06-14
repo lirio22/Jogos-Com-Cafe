@@ -9,5 +9,6 @@ public class DesselecionaBotao : MonoBehaviour, IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData)
     {
         botao.OnDeselect(null);
+        AudioPlayer.instance.PararSom();
     }
 }
