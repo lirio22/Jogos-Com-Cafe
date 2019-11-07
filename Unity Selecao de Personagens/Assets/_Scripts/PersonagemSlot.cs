@@ -7,7 +7,7 @@ public class PersonagemSlot : MonoBehaviour
 
     [SerializeField] private Sprite[] avatares;
     public static bool[] escolhido; //O "static" aqui faz com que se algum objeto alterar o valor dessa variável, todas as instâncias desse script na mesma cena vão ter as variáveis alteradas também
-    private int avatarIndice;
+    [SerializeField] private int avatarIndice;
     private int ultimoAvatarIndice;
 
     [SerializeField] private Image avatarImagem;
@@ -17,6 +17,8 @@ public class PersonagemSlot : MonoBehaviour
     private void Start()
     {
         escolhido = new bool[avatares.Length];
+
+        MudarPersonagem(1);
     }
 
     public void MudarPersonagem(int direcao)
@@ -68,7 +70,7 @@ public class PersonagemSlot : MonoBehaviour
     //Verifica se o avatar já foi escolhido por outros jogadores
     public bool ChecarAvatarDisponivel()
     {
-        for(int i = 0; i < avatares.Length; i++)
+        for(int i = 0; i < escolhido.Length; i++)
         {
             if(!escolhido[i])
             {
