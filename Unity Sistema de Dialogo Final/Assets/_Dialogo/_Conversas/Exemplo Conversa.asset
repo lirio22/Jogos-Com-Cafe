@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3882978a40cba0f42a8333817a8647fb, type: 3}
+  m_Name: Exemplo Conversa
+  m_EditorClassIdentifier: 
+  Falas:
+  - Personagem: {fileID: 11400000, guid: 49554ca2d4bc55d4da9246ee1f88d4e7, type: 2}
+    IdDaExpressao: 0
+    TextoDasFalas:
+    - Bem vindos!
+    - "Este \xE9 um exemplo de di\xE1logo!"
+  - Personagem: {fileID: 11400000, guid: 49554ca2d4bc55d4da9246ee1f88d4e7, type: 2}
+    IdDaExpressao: 2
+    TextoDasFalas:
+    - "O que achou da introdu\xE7\xE3o?"
+  - Personagem: {fileID: 11400000, guid: 53a3b4aa1576bbd4798944d643d3c633, type: 2}
+    IdDaExpressao: 1
+    TextoDasFalas:
+    - "N\xE3o era melhor ter s\xF3 fingido que era uma conversa?"
+    - "Sem precisar mencionar que \xE9 um exemplo?"
+  - Personagem: {fileID: 11400000, guid: 49554ca2d4bc55d4da9246ee1f88d4e7, type: 2}
+    IdDaExpressao: 1
+    TextoDasFalas:
+    - "Me deixa, eu estava sem id\xE9ias."
+  - Personagem: {fileID: 11400000, guid: 49554ca2d4bc55d4da9246ee1f88d4e7, type: 2}
+    IdDaExpressao: 2
+    TextoDasFalas:
+    - "O Importante \xE9 que est\xE1 funcionando!"
+  - Personagem: {fileID: 11400000, guid: 53a3b4aa1576bbd4798944d643d3c633, type: 2}
+    IdDaExpressao: 0
+    TextoDasFalas:
+    - "Ent\xE3o acho que n\xE3o tem problema falar agora:"
+    - Fim do exemplo!
